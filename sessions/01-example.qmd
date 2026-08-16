@@ -5,6 +5,7 @@ title: "第1回 〇〇分析（ここをセッション名に置き換え）"
 ## 概要
 
 （この回の目的、使用データセット、前提知識などをここに記載）
+[スライド原本をダウンロード](https://drive.google.com/file/d/1dA4cNbWCd2FacfpgXjUhoeV5ccIff7TO/view?usp=drive_link)
 
 ## 演習コード
 
