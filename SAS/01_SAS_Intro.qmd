@@ -61,7 +61,7 @@ run;
 
 [演習用データセット(csv)をダウンロード]
 (https://drive.google.com/file/d/1Q8QaP34fmgMeMC9vlfmk8eN8FoRYt2_-/view?usp=drive_link)
-(https://drive.google.com/file/d/1Q8QaP34fmgMeMC9vlfmk8eN8FoRYt2_-/view?usp=drive_link)
+(https://drive.google.com/file/d/1i6Q2UiuXTVSjzDT1eE6l8vnSVIyckDyi/view?usp=drive_link)
 
 ## 講義動画
 
