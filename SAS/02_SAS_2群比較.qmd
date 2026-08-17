@@ -1,5 +1,5 @@
 ---
-title: "SAS_第1回introduction 記述 相関"
+title: "SAS_第2回2群比較"
 ---
 
 ## 概要
@@ -9,7 +9,6 @@ title: "SAS_第1回introduction 記述 相関"
 
 ## 演習コード
 
-::: {.panel-tabset}
 
 ## R
 
