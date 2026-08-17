@@ -9,61 +9,133 @@
   {
     "objectID": "SAS/02_SAS_2群比較.html",
     "href": "SAS/02_SAS_2群比較.html",
-    "title": "SAS_第1回introduction 記述 相関",
+    "title": "SAS_第2回2群比較",
     "section": "",
     "text": "（この回の目的、使用データセット、前提知識などをここに記載） スライド原本をダウンロード",
     "crumbs": [
       "ホーム",
       "SAS",
-      "SAS_第1回introduction 記述 相関"
+      "SAS_第2回2群比較"
     ]
   },
   {
     "objectID": "SAS/02_SAS_2群比較.html#概要",
     "href": "SAS/02_SAS_2群比較.html#概要",
-    "title": "SAS_第1回introduction 記述 相関",
+    "title": "SAS_第2回2群比較",
     "section": "",
     "text": "（この回の目的、使用データセット、前提知識などをここに記載） スライド原本をダウンロード",
     "crumbs": [
       "ホーム",
       "SAS",
-      "SAS_第1回introduction 記述 相関"
+      "SAS_第2回2群比較"
     ]
   },
   {
     "objectID": "SAS/02_SAS_2群比較.html#演習コード",
     "href": "SAS/02_SAS_2群比較.html#演習コード",
-    "title": "SAS_第1回introduction 記述 相関",
+    "title": "SAS_第2回2群比較",
     "section": "演習コード",
-    "text": "演習コード\n\nRPythonSASJMPSPSSEZR\n\n\n\n\n\n#| eval: false\n# Pythonコードも同様に実行され、結果が埋め込まれます\nimport pandas as pd\ndf = pd.DataFrame({\"x\": [1, 2, 3]})\ndf.describe()\n\n\n/* SASコードは実行されず、シンタックスハイライト表示のみです */\nproc means data=sashelp.class;\nrun;\n\n\n/* JMPスクリプトも同様に表示のみです */\n\n\n* SPSS構文も表示のみです.\n\n\n# EZRはR基盤のため、Rタブと同じ書き方で実行結果を埋め込めます",
+    "text": "演習コード",
     "crumbs": [
       "ホーム",
       "SAS",
-      "SAS_第1回introduction 記述 相関"
+      "SAS_第2回2群比較"
+    ]
+  },
+  {
+    "objectID": "SAS/02_SAS_2群比較.html#r",
+    "href": "SAS/02_SAS_2群比較.html#r",
+    "title": "SAS_第2回2群比較",
+    "section": "R",
+    "text": "R",
+    "crumbs": [
+      "ホーム",
+      "SAS",
+      "SAS_第2回2群比較"
+    ]
+  },
+  {
+    "objectID": "SAS/02_SAS_2群比較.html#python",
+    "href": "SAS/02_SAS_2群比較.html#python",
+    "title": "SAS_第2回2群比較",
+    "section": "Python",
+    "text": "Python\n#| eval: false\n# Pythonコードも同様に実行され、結果が埋め込まれます\nimport pandas as pd\ndf = pd.DataFrame({\"x\": [1, 2, 3]})\ndf.describe()",
+    "crumbs": [
+      "ホーム",
+      "SAS",
+      "SAS_第2回2群比較"
+    ]
+  },
+  {
+    "objectID": "SAS/02_SAS_2群比較.html#sas",
+    "href": "SAS/02_SAS_2群比較.html#sas",
+    "title": "SAS_第2回2群比較",
+    "section": "SAS",
+    "text": "SAS\n/* SASコードは実行されず、シンタックスハイライト表示のみです */\nproc means data=sashelp.class;\nrun;",
+    "crumbs": [
+      "ホーム",
+      "SAS",
+      "SAS_第2回2群比較"
+    ]
+  },
+  {
+    "objectID": "SAS/02_SAS_2群比較.html#jmp",
+    "href": "SAS/02_SAS_2群比較.html#jmp",
+    "title": "SAS_第2回2群比較",
+    "section": "JMP",
+    "text": "JMP\n/* JMPスクリプトも同様に表示のみです */",
+    "crumbs": [
+      "ホーム",
+      "SAS",
+      "SAS_第2回2群比較"
+    ]
+  },
+  {
+    "objectID": "SAS/02_SAS_2群比較.html#spss",
+    "href": "SAS/02_SAS_2群比較.html#spss",
+    "title": "SAS_第2回2群比較",
+    "section": "SPSS",
+    "text": "SPSS\n* SPSS構文も表示のみです.",
+    "crumbs": [
+      "ホーム",
+      "SAS",
+      "SAS_第2回2群比較"
+    ]
+  },
+  {
+    "objectID": "SAS/02_SAS_2群比較.html#ezr",
+    "href": "SAS/02_SAS_2群比較.html#ezr",
+    "title": "SAS_第2回2群比較",
+    "section": "EZR",
+    "text": "EZR\n# EZRはR基盤のため、Rタブと同じ書き方で実行結果を埋め込めます\n:::",
+    "crumbs": [
+      "ホーム",
+      "SAS",
+      "SAS_第2回2群比較"
     ]
   },
   {
     "objectID": "SAS/02_SAS_2群比較.html#データセット",
     "href": "SAS/02_SAS_2群比較.html#データセット",
-    "title": "SAS_第1回introduction 記述 相関",
+    "title": "SAS_第2回2群比較",
     "section": "データセット",
     "text": "データセット\n演習用データセット(csv)をダウンロード\n演習用データセット(sas dataset)をダウンロード\nsascodeをダウンロード",
     "crumbs": [
       "ホーム",
       "SAS",
-      "SAS_第1回introduction 記述 相関"
+      "SAS_第2回2群比較"
     ]
   },
   {
     "objectID": "SAS/02_SAS_2群比較.html#講義動画",
     "href": "SAS/02_SAS_2群比較.html#講義動画",
-    "title": "SAS_第1回introduction 記述 相関",
+    "title": "SAS_第2回2群比較",
     "section": "講義動画",
     "text": "講義動画\n（Google Driveの共有リンクをここに貼る）",
     "crumbs": [
       "ホーム",
       "SAS",
-      "SAS_第1回introduction 記述 相関"
+      "SAS_第2回2群比較"
     ]
   },
   {
