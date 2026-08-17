@@ -1,0 +1,70 @@
+---
+title: "SAS_第1回introduction 記述 相関"
+---
+
+## 概要
+
+（この回の目的、使用データセット、前提知識などをここに記載）
+[スライド原本をダウンロード](https://drive.google.com/file/d/1LGEEGOKoUSBbTVFNNHiKjfvFJZlN4p7N/view?usp=drive_link)
+
+## 演習コード
+
+::: {.panel-tabset}
+
+## R
+
+```{r}
+#| eval: true
+# Rコードはここに書くと実行結果が自動で埋め込まれます
+summary(mtcars)
+```
+
+## Python
+
+```python
+#| eval: false
+# Pythonコードも同様に実行され、結果が埋め込まれます
+import pandas as pd
+df = pd.DataFrame({"x": [1, 2, 3]})
+df.describe()
+```
+
+## SAS
+
+```sas
+/* SASコードは実行されず、シンタックスハイライト表示のみです */
+proc means data=sashelp.class;
+run;
+```
+
+## JMP
+
+```
+/* JMPスクリプトも同様に表示のみです */
+```
+
+## SPSS
+
+```
+* SPSS構文も表示のみです.
+```
+
+## EZR
+
+```r
+# EZRはR基盤のため、Rタブと同じ書き方で実行結果を埋め込めます
+```
+
+:::
+
+## データセット
+
+[演習用データセット(csv)をダウンロード](https://drive.google.com/file/d/1s1kGvDq8IT5tcmzlN6tOeGgfxnDc1IoZ/view?usp=drive_link)
+[演習用データセット(sas dataset)をダウンロード](https://drive.google.com/file/d/1dMQo5keWR7xEAZis0b-jd1o34jsigN4-/view?usp=drive_link)
+
+[sas codeをダウンロード](https://drive.google.com/file/d/1BRrceM88BBF1BkLfTfEfSd4EgiuZDVak/view?usp=drive_link)
+
+
+## 講義動画
+
+（Google Driveの共有リンクをここに貼る）
