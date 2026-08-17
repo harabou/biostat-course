@@ -62,7 +62,7 @@ run;
 [演習用データセット(csv)をダウンロード](https://drive.google.com/file/d/1s1kGvDq8IT5tcmzlN6tOeGgfxnDc1IoZ/view?usp=drive_link)
 [演習用データセット(sas dataset)をダウンロード](https://drive.google.com/file/d/1dMQo5keWR7xEAZis0b-jd1o34jsigN4-/view?usp=drive_link)
 
-[sas codeをダウンロード](https://drive.google.com/file/d/1BRrceM88BBF1BkLfTfEfSd4EgiuZDVak/view?usp=drive_link)
+[sascodeをダウンロード](https://drive.google.com/file/d/1BRrceM88BBF1BkLfTfEfSd4EgiuZDVak/view?usp=drive_link)
 
 
 ## 講義動画
