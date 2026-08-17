@@ -2,14 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://harabou.github.io/biostat-course/index.html</loc>
-    <lastmod>2026-08-17T05:26:22.722Z</lastmod>
-  </url>
-  <url>
-    <loc>https://harabou.github.io/biostat-course/SAS/02_SAS_2群比較.html</loc>
-    <lastmod>2026-08-17T05:26:22.717Z</lastmod>
+    <lastmod>2026-08-17T10:21:51.678Z</lastmod>
   </url>
   <url>
     <loc>https://harabou.github.io/biostat-course/SAS/01_SAS_Intro.html</loc>
-    <lastmod>2026-08-17T05:26:22.717Z</lastmod>
+    <lastmod>2026-08-17T10:21:51.673Z</lastmod>
+  </url>
+  <url>
+    <loc>https://harabou.github.io/biostat-course/SAS/02_SAS_2群比較.html</loc>
+    <lastmod>2026-08-17T10:21:51.673Z</lastmod>
+  </url>
+  <url>
+    <loc>https://harabou.github.io/biostat-course/SAS/03_SAS_分散分析.html</loc>
+    <lastmod>2026-08-17T10:21:51.673Z</lastmod>
   </url>
 </urlset>
