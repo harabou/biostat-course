@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SAS_第1回introduction 記述 相関 – 統計解析 講義・演習リンク集</title>
+<title>Food Detection with YOLO (UEC FOOD 100 subset) – 統計解析 講義・演習リンク集</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -143,7 +143,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../SAS/01_SAS_Intro.html">SAS</a></li><li class="breadcrumb-item"><a href="../SAS/01_SAS_Intro.html">SAS_第1回introduction 記述 相関</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Stat_DL_exercise/food_CNN_classification_学生版.html">Stat DL Exercise</a></li><li class="breadcrumb-item"><a href="../Stat_DL_exercise/food_YOLO_training (3).html">Food Detection with YOLO (UEC FOOD 100 subset)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -166,7 +166,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../SAS/01_SAS_Intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="../SAS/01_SAS_Intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SAS_第1回introduction 記述 相関</span></a>
   </div>
 </li>
@@ -213,7 +213,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Stat_DL_exercise/food_YOLO_training (3).html" class="sidebar-item-text sidebar-link">
+  <a href="../Stat_DL_exercise/food_YOLO_training (3).html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Food Detection with YOLO (UEC FOOD 100 subset)</span></a>
   </div>
 </li>
@@ -235,19 +235,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#概要" id="toc-概要" class="nav-link active" data-scroll-target="#概要">概要</a></li>
-  <li><a href="#演習コード" id="toc-演習コード" class="nav-link" data-scroll-target="#演習コード">演習コード</a></li>
-  <li><a href="#データセット" id="toc-データセット" class="nav-link" data-scroll-target="#データセット">データセット</a></li>
-  <li><a href="#講義動画" id="toc-講義動画" class="nav-link" data-scroll-target="#講義動画">講義動画</a></li>
+  <li><a href="#googleドライブのマウント" id="toc-googleドライブのマウント" class="nav-link active" data-scroll-target="#googleドライブのマウント">1. Googleドライブのマウント</a></li>
+  <li><a href="#ライブラリのインストール" id="toc-ライブラリのインストール" class="nav-link" data-scroll-target="#ライブラリのインストール">2. ライブラリのインストール</a></li>
+  <li><a href="#データ変換bb_info.txt-yolo形式" id="toc-データ変換bb_info.txt-yolo形式" class="nav-link" data-scroll-target="#データ変換bb_info.txt-yolo形式">3. データ変換(bb_info.txt → YOLO形式)</a></li>
+  <li><a href="#学習fine-tuning" id="toc-学習fine-tuning" class="nav-link" data-scroll-target="#学習fine-tuning">4. 学習(Fine-tuning)</a></li>
+  <li><a href="#評価mapprecisionrecallなど" id="toc-評価mapprecisionrecallなど" class="nav-link" data-scroll-target="#評価mapprecisionrecallなど">5. 評価(mAP・Precision・Recallなど)</a></li>
+  <li><a href="#推論と可視化" id="toc-推論と可視化" class="nav-link" data-scroll-target="#推論と可視化">6. 推論と可視化</a></li>
+  <li><a href="#つのモデルを見比べる" id="toc-つのモデルを見比べる" class="nav-link" data-scroll-target="#つのモデルを見比べる">7. 2つのモデルを見比べる</a></li>
+  <li><a href="#学習済みの重みをドライブに保存" id="toc-学習済みの重みをドライブに保存" class="nav-link" data-scroll-target="#学習済みの重みをドライブに保存">8. 学習済みの重みをドライブに保存</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../SAS/01_SAS_Intro.html">SAS</a></li><li class="breadcrumb-item"><a href="../SAS/01_SAS_Intro.html">SAS_第1回introduction 記述 相関</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Stat_DL_exercise/food_CNN_classification_学生版.html">Stat DL Exercise</a></li><li class="breadcrumb-item"><a href="../Stat_DL_exercise/food_YOLO_training (3).html">Food Detection with YOLO (UEC FOOD 100 subset)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">SAS_第1回introduction 記述 相関</h1>
+<h1 class="title">Food Detection with YOLO (UEC FOOD 100 subset)</h1>
 </div>
 
 
@@ -264,78 +268,153 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="概要" class="level2">
-<h2 class="anchored" data-anchor-id="概要">概要</h2>
-<p>（この回の目的、使用データセット、前提知識などをここに記載） <a href="https://drive.google.com/file/d/1dA4cNbWCd2FacfpgXjUhoeV5ccIff7TO/view?usp=drive_link">スライド原本をダウンロード</a></p>
-</section>
-<section id="演習コード" class="level2">
-<h2 class="anchored" data-anchor-id="演習コード">演習コード</h2>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">SAS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">JMP</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false" href="">SPSS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false" href="">EZR</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div class="cell">
+<p>主食・主菜・副菜・汁物の12品目を対象に、YOLOで複数品目の物体検出を行います。 分類演習(<code>food_CNN_classification.ipynb</code>)が「1品目だけ切り出した画像」を扱ったのに対し、 こちらは給食トレイのような<strong>1枚の写真に複数品目が写っている</strong>、より実際の場面に近い画像を扱います。</p>
+<p>事前準備: - UEC FOOD 100 データセット一式(1/～100/フォルダ、multiple_food.txt など)をGoogleドライブにアップロード - <code>convert_uecfood100_to_yolo.py</code> と <code>category_ja_utf8.txt</code> も同じドライブ上に配置</p>
+<section id="googleドライブのマウント" class="level2">
+<h2 class="anchored" data-anchor-id="googleドライブのマウント">1. Googleドライブのマウント</h2>
+<div id="cell-3" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Rコードはここに書くと実行結果が自動で埋め込まれます</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mtcars)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>drive.mount(<span class="st">'/content/drive'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>      mpg             cyl             disp             hp       
- Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  
- 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  
- Median :19.20   Median :6.000   Median :196.3   Median :123.0  
- Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  
- 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  
- Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  
-      drat             wt             qsec             vs        
- Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  
- 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  
- Median :3.695   Median :3.325   Median :17.71   Median :0.0000  
- Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  
- 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  
- Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  
-       am              gear            carb      
- Min.   :0.0000   Min.   :3.000   Min.   :1.000  
- 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  
- Median :0.0000   Median :4.000   Median :2.000  
- Mean   :0.4062   Mean   :3.688   Mean   :2.812  
- 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  
- Max.   :1.0000   Max.   :5.000   Max.   :8.000  </code></pre>
 </div>
-</div>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Pythonコードも同様に実行され、結果が埋め込まれます</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">"x"</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]})</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>df.describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<pre class="sas"><code>/* SASコードは実行されず、シンタックスハイライト表示のみです */
-proc means data=sashelp.class;
-run;</code></pre>
-</div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<pre><code>/* JMPスクリプトも同様に表示のみです */</code></pre>
-</div>
-<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
-<pre><code>* SPSS構文も表示のみです.</code></pre>
-</div>
-<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># EZRはR基盤のため、Rタブと同じ書き方で実行結果を埋め込めます</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
+<div id="cell-4" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 環境に合わせて書き換えてください</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>base_dir <span class="op">=</span> <span class="st">'/content/drive/MyDrive/food_yolo/'</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>dataset_root <span class="op">=</span> base_dir <span class="op">+</span> <span class="st">'UECFOOD100/'</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>output_dir <span class="op">=</span> base_dir <span class="op">+</span> <span class="st">'yolo_data/'</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>category_names_path <span class="op">=</span> base_dir <span class="op">+</span> <span class="st">'category_ja_utf8.txt'</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>convert_script_path <span class="op">=</span> base_dir <span class="op">+</span> <span class="st">'convert_uecfood100_to_yolo.py'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 </div>
 </section>
-<section id="データセット" class="level2">
-<h2 class="anchored" data-anchor-id="データセット">データセット</h2>
-<p><a href="https://drive.google.com/file/d/1Q8QaP34fmgMeMC9vlfmk8eN8FoRYt2_-/view?usp=drive_link">演習用データセット(csv)をダウンロード</a> <a href="https://drive.google.com/file/d/1i6Q2UiuXTVSjzDT1eE6l8vnSVIyckDyi/view?usp=drive_link">演習用データセット(sas dataset)をダウンロード</a></p>
+<section id="ライブラリのインストール" class="level2">
+<h2 class="anchored" data-anchor-id="ライブラリのインストール">2. ライブラリのインストール</h2>
+<div id="cell-6" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install ultralytics pillow <span class="op">-</span>q</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
 </section>
-<section id="講義動画" class="level2">
-<h2 class="anchored" data-anchor-id="講義動画">講義動画</h2>
-<p>（Google Driveの共有リンクをここに貼る）</p>
+<section id="データ変換bb_info.txt-yolo形式" class="level2">
+<h2 class="anchored" data-anchor-id="データ変換bb_info.txt-yolo形式">3. データ変換(bb_info.txt → YOLO形式)</h2>
+<p>以前用意した <code>convert_uecfood100_to_yolo.py</code> を、選んだ12品目を指定して実行します。 同じ写真が複数カテゴリに重複している場合(例: ごはん+味噌汁)も、自動的に1枚の画像・ 1つのラベルファイルにまとめられます。</p>
+<div id="cell-8" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>CATEGORIES <span class="op">=</span> <span class="st">"1,36,46,55,56,60,63,67,69,70,87,90"</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>python <span class="st">"</span><span class="sc">{convert_script_path}</span><span class="st">"</span> <span class="op">\</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">--</span>dataset<span class="op">-</span>root <span class="st">"</span><span class="sc">{dataset_root}</span><span class="st">"</span> <span class="op">\</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">--</span>output<span class="op">-</span><span class="bu">dir</span> <span class="st">"</span><span class="sc">{output_dir}</span><span class="st">"</span> <span class="op">\</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">--</span>categories <span class="st">"</span><span class="sc">{CATEGORIES}</span><span class="st">"</span> <span class="op">\</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">--</span>category<span class="op">-</span>names <span class="st">"</span><span class="sc">{category_names_path}</span><span class="st">"</span> <span class="op">\</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">--</span>val<span class="op">-</span>fraction <span class="fl">0.2</span> <span class="op">\</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">--</span>seed <span class="dv">42</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-9" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 出力内容の確認</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> split <span class="kw">in</span> (<span class="st">"train"</span>, <span class="st">"val"</span>):</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    n_images <span class="op">=</span> <span class="bu">len</span>(os.listdir(output_dir <span class="op">+</span> <span class="ss">f"images/</span><span class="sc">{</span>split<span class="sc">}</span><span class="ss">"</span>))</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    n_labels <span class="op">=</span> <span class="bu">len</span>(os.listdir(output_dir <span class="op">+</span> <span class="ss">f"labels/</span><span class="sc">{</span>split<span class="sc">}</span><span class="ss">"</span>))</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>split<span class="sc">}</span><span class="ss">: images=</span><span class="sc">{</span>n_images<span class="sc">}</span><span class="ss">, labels=</span><span class="sc">{</span>n_labels<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(output_dir <span class="op">+</span> <span class="st">"data.yaml"</span>, encoding<span class="op">=</span><span class="st">"utf-8"</span>) <span class="im">as</span> f:</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(f.read())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="学習fine-tuning" class="level2">
+<h2 class="anchored" data-anchor-id="学習fine-tuning">4. 学習(Fine-tuning)</h2>
+<div id="cell-11" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ultralytics <span class="im">import</span> YOLO</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># nano(最小・最速)モデルをベースに、今回の12クラスでfine-tuning</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> YOLO(<span class="st">"yolo11n.pt"</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> model.train(</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>output_dir <span class="op">+</span> <span class="st">"data.yaml"</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    epochs<span class="op">=</span><span class="dv">50</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    imgsz<span class="op">=</span><span class="dv">640</span>,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    batch<span class="op">=</span><span class="dv">16</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">"food_yolo"</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="評価mapprecisionrecallなど" class="level2">
+<h2 class="anchored" data-anchor-id="評価mapprecisionrecallなど">5. 評価(mAP・Precision・Recallなど)</h2>
+<p>Roboflow側の結果(mAP@50, Precision, Recall, F1)と同じ指標で比較できるよう、検証データで評価します。</p>
+<div id="cell-13" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>metrics <span class="op">=</span> model.val()</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"mAP@50:    </span><span class="sc">{</span>metrics<span class="sc">.</span>box<span class="sc">.</span>map50<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"mAP@50-95: </span><span class="sc">{</span>metrics<span class="sc">.</span>box<span class="sc">.</span><span class="bu">map</span><span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Precision: </span><span class="sc">{</span>metrics<span class="sc">.</span>box<span class="sc">.</span>mp<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Recall:    </span><span class="sc">{</span>metrics<span class="sc">.</span>box<span class="sc">.</span>mr<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="推論と可視化" class="level2">
+<h2 class="anchored" data-anchor-id="推論と可視化">6. 推論と可視化</h2>
+<p>学習したモデルで、実際の写真から複数品目を検出してみます。 Roboflow側で作った <code>detect_and_show()</code> と同じ使い勝手になるよう、 同名の関数として揃えています(こちらは <code>detect_and_show_yolo</code> という名前です)。</p>
+<div id="cell-15" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> detect_and_show_yolo(image_path, confidence<span class="op">=</span><span class="fl">0.4</span>):</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> model.predict(image_path, conf<span class="op">=</span>confidence, verbose<span class="op">=</span><span class="va">False</span>)[<span class="dv">0</span>]</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    annotated <span class="op">=</span> result.plot()  <span class="co"># ultralyticsが描画済みの画像(BGR)を返す</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    annotated_rgb <span class="op">=</span> annotated[..., ::<span class="op">-</span><span class="dv">1</span>]  <span class="co"># BGR -&gt; RGB</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    ax.imshow(annotated_rgb)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    ax.axis(<span class="st">'off'</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 使い方</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> detect_and_show_yolo(<span class="st">"test_photo.jpg"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="つのモデルを見比べる" class="level2">
+<h2 class="anchored" data-anchor-id="つのモデルを見比べる">7. 2つのモデルを見比べる</h2>
+<p>同じ写真に対して、Roboflow側のモデル(<code>detect_and_show</code>)と、 今回のYOLOモデル(<code>detect_and_show_yolo</code>)を並べて実行すれば、 「少数の自分の写真だけで学習したモデル」と「既存の大きいデータセットで学習したモデル」の 違いを直接見比べられます。Roboflow側のセルをこのノートブックにコピーしてから、 以下のように両方を呼び出してみてください。</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--- Roboflow (自分の写真のみで学習) ---"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>detect_and_show(<span class="st">"test_photo.jpg"</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--- YOLO (既存の大きいデータセットで学習) ---"</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>detect_and_show_yolo(<span class="st">"test_photo.jpg"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="学習済みの重みをドライブに保存" class="level2">
+<h2 class="anchored" data-anchor-id="学習済みの重みをドライブに保存">8. 学習済みの重みをドライブに保存</h2>
+<p><code>best.pt</code> は今のままだとColab自体のディスク(<code>/content/...</code>)にあるだけなので、セッションが切れると消えてしまいます。 学生用の演習(<code>food_YOLO_exercise.ipynb</code>)で使えるように、ドライブにコピーしておきます。</p>
+<div id="cell-18" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>cp <span class="op">/</span>content<span class="op">/</span>runs<span class="op">/</span>detect<span class="op">/</span>food_yolo<span class="op">/</span>weights<span class="op">/</span>best.pt <span class="op">\</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"/content/drive/MyDrive/Colab Notebooks/food_yolo/best.pt"</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"コピー完了。food_YOLO_exercise.ipynb からはこのパスを読み込みます。"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
 
 
 </section>
