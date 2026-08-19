@@ -324,135 +324,70 @@
     ]
   },
   {
-    "objectID": "SAS/03_SAS_分散分析.html",
-    "href": "SAS/03_SAS_分散分析.html",
-    "title": "SAS　第2回2群比較",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "統計解析 講義・演習リンク集",
+    "section": "",
+    "text": "このサイトは講義資料・演習コード・データセットの検索用ポータルです。\n左のサイドバー、または右上の検索アイコンから目的の回を探してください。"
+  },
+  {
+    "objectID": "SAS/01_SAS_Intro.html",
+    "href": "SAS/01_SAS_Intro.html",
+    "title": "SAS_第1回introduction 記述 相関",
     "section": "",
     "text": "（この回の目的、使用データセット、前提知識などをここに記載） スライド原本をダウンロード",
     "crumbs": [
       "ホーム",
       "SAS",
-      "SAS　第2回2群比較"
+      "SAS_第1回introduction 記述 相関"
     ]
   },
   {
-    "objectID": "SAS/03_SAS_分散分析.html#概要",
-    "href": "SAS/03_SAS_分散分析.html#概要",
-    "title": "SAS　第2回2群比較",
+    "objectID": "SAS/01_SAS_Intro.html#概要",
+    "href": "SAS/01_SAS_Intro.html#概要",
+    "title": "SAS_第1回introduction 記述 相関",
     "section": "",
     "text": "（この回の目的、使用データセット、前提知識などをここに記載） スライド原本をダウンロード",
     "crumbs": [
       "ホーム",
       "SAS",
-      "SAS　第2回2群比較"
+      "SAS_第1回introduction 記述 相関"
     ]
   },
   {
-    "objectID": "SAS/03_SAS_分散分析.html#演習コード",
-    "href": "SAS/03_SAS_分散分析.html#演習コード",
-    "title": "SAS　第2回2群比較",
+    "objectID": "SAS/01_SAS_Intro.html#演習コード",
+    "href": "SAS/01_SAS_Intro.html#演習コード",
+    "title": "SAS_第1回introduction 記述 相関",
     "section": "演習コード",
-    "text": "演習コード",
+    "text": "演習コード\n\nRPythonSASJMPSPSSEZR\n\n\n\n\nCode\n# Rコードはここに書くと実行結果が自動で埋め込まれます\nsummary(mtcars)\n\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000  \n\n\n\n\n#| eval: false\n# Pythonコードも同様に実行され、結果が埋め込まれます\nimport pandas as pd\ndf = pd.DataFrame({\"x\": [1, 2, 3]})\ndf.describe()\n\n\n/* SASコードは実行されず、シンタックスハイライト表示のみです */\nproc means data=sashelp.class;\nrun;\n\n\n/* JMPスクリプトも同様に表示のみです */\n\n\n* SPSS構文も表示のみです.\n\n\n# EZRはR基盤のため、Rタブと同じ書き方で実行結果を埋め込めます",
     "crumbs": [
       "ホーム",
       "SAS",
-      "SAS　第2回2群比較"
+      "SAS_第1回introduction 記述 相関"
     ]
   },
   {
-    "objectID": "SAS/03_SAS_分散分析.html#r",
-    "href": "SAS/03_SAS_分散分析.html#r",
-    "title": "SAS　第2回2群比較",
-    "section": "R",
-    "text": "R",
-    "crumbs": [
-      "ホーム",
-      "SAS",
-      "SAS　第2回2群比較"
-    ]
-  },
-  {
-    "objectID": "SAS/03_SAS_分散分析.html#python",
-    "href": "SAS/03_SAS_分散分析.html#python",
-    "title": "SAS　第2回2群比較",
-    "section": "Python",
-    "text": "Python\n#| eval: false\n# Pythonコードも同様に実行され、結果が埋め込まれます\nimport pandas as pd\ndf = pd.DataFrame({\"x\": [1, 2, 3]})\ndf.describe()",
-    "crumbs": [
-      "ホーム",
-      "SAS",
-      "SAS　第2回2群比較"
-    ]
-  },
-  {
-    "objectID": "SAS/03_SAS_分散分析.html#sas",
-    "href": "SAS/03_SAS_分散分析.html#sas",
-    "title": "SAS　第2回2群比較",
-    "section": "SAS",
-    "text": "SAS\n/* SASコードは実行されず、シンタックスハイライト表示のみです */\nproc means data=sashelp.class;\nrun;",
-    "crumbs": [
-      "ホーム",
-      "SAS",
-      "SAS　第2回2群比較"
-    ]
-  },
-  {
-    "objectID": "SAS/03_SAS_分散分析.html#jmp",
-    "href": "SAS/03_SAS_分散分析.html#jmp",
-    "title": "SAS　第2回2群比較",
-    "section": "JMP",
-    "text": "JMP\n/* JMPスクリプトも同様に表示のみです */",
-    "crumbs": [
-      "ホーム",
-      "SAS",
-      "SAS　第2回2群比較"
-    ]
-  },
-  {
-    "objectID": "SAS/03_SAS_分散分析.html#spss",
-    "href": "SAS/03_SAS_分散分析.html#spss",
-    "title": "SAS　第2回2群比較",
-    "section": "SPSS",
-    "text": "SPSS\n* SPSS構文も表示のみです.",
-    "crumbs": [
-      "ホーム",
-      "SAS",
-      "SAS　第2回2群比較"
-    ]
-  },
-  {
-    "objectID": "SAS/03_SAS_分散分析.html#ezr",
-    "href": "SAS/03_SAS_分散分析.html#ezr",
-    "title": "SAS　第2回2群比較",
-    "section": "EZR",
-    "text": "EZR\n# EZRはR基盤のため、Rタブと同じ書き方で実行結果を埋め込めます\n:::",
-    "crumbs": [
-      "ホーム",
-      "SAS",
-      "SAS　第2回2群比較"
-    ]
-  },
-  {
-    "objectID": "SAS/03_SAS_分散分析.html#データセット",
-    "href": "SAS/03_SAS_分散分析.html#データセット",
-    "title": "SAS　第2回2群比較",
+    "objectID": "SAS/01_SAS_Intro.html#データセット",
+    "href": "SAS/01_SAS_Intro.html#データセット",
+    "title": "SAS_第1回introduction 記述 相関",
     "section": "データセット",
-    "text": "データセット\n演習用データセット(csv)をダウンロード\n演習用データセット(sas dataset)をダウンロード\nsascodeをダウンロード",
+    "text": "データセット\n演習用データセット(csv)をダウンロード 演習用データセット(sas dataset)をダウンロード",
     "crumbs": [
       "ホーム",
       "SAS",
-      "SAS　第2回2群比較"
+      "SAS_第1回introduction 記述 相関"
     ]
   },
   {
-    "objectID": "SAS/03_SAS_分散分析.html#講義動画",
-    "href": "SAS/03_SAS_分散分析.html#講義動画",
-    "title": "SAS　第2回2群比較",
+    "objectID": "SAS/01_SAS_Intro.html#講義動画",
+    "href": "SAS/01_SAS_Intro.html#講義動画",
+    "title": "SAS_第1回introduction 記述 相関",
     "section": "講義動画",
     "text": "講義動画\n（Google Driveの共有リンクをここに貼る）",
     "crumbs": [
       "ホーム",
       "SAS",
-      "SAS　第2回2群比較"
+      "SAS_第1回introduction 記述 相関"
     ]
   },
   {
@@ -588,71 +523,256 @@
     ]
   },
   {
-    "objectID": "SAS/01_SAS_Intro.html",
-    "href": "SAS/01_SAS_Intro.html",
-    "title": "SAS_第1回introduction 記述 相関",
+    "objectID": "SAS/03_SAS_分散分析.html",
+    "href": "SAS/03_SAS_分散分析.html",
+    "title": "SAS　第2回2群比較",
     "section": "",
     "text": "（この回の目的、使用データセット、前提知識などをここに記載） スライド原本をダウンロード",
     "crumbs": [
       "ホーム",
       "SAS",
-      "SAS_第1回introduction 記述 相関"
+      "SAS　第2回2群比較"
     ]
   },
   {
-    "objectID": "SAS/01_SAS_Intro.html#概要",
-    "href": "SAS/01_SAS_Intro.html#概要",
-    "title": "SAS_第1回introduction 記述 相関",
+    "objectID": "SAS/03_SAS_分散分析.html#概要",
+    "href": "SAS/03_SAS_分散分析.html#概要",
+    "title": "SAS　第2回2群比較",
     "section": "",
     "text": "（この回の目的、使用データセット、前提知識などをここに記載） スライド原本をダウンロード",
     "crumbs": [
       "ホーム",
       "SAS",
-      "SAS_第1回introduction 記述 相関"
+      "SAS　第2回2群比較"
     ]
   },
   {
-    "objectID": "SAS/01_SAS_Intro.html#演習コード",
-    "href": "SAS/01_SAS_Intro.html#演習コード",
-    "title": "SAS_第1回introduction 記述 相関",
+    "objectID": "SAS/03_SAS_分散分析.html#演習コード",
+    "href": "SAS/03_SAS_分散分析.html#演習コード",
+    "title": "SAS　第2回2群比較",
     "section": "演習コード",
-    "text": "演習コード\n\nRPythonSASJMPSPSSEZR\n\n\n\n\nCode\n# Rコードはここに書くと実行結果が自動で埋め込まれます\nsummary(mtcars)\n\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000  \n\n\n\n\n#| eval: false\n# Pythonコードも同様に実行され、結果が埋め込まれます\nimport pandas as pd\ndf = pd.DataFrame({\"x\": [1, 2, 3]})\ndf.describe()\n\n\n/* SASコードは実行されず、シンタックスハイライト表示のみです */\nproc means data=sashelp.class;\nrun;\n\n\n/* JMPスクリプトも同様に表示のみです */\n\n\n* SPSS構文も表示のみです.\n\n\n# EZRはR基盤のため、Rタブと同じ書き方で実行結果を埋め込めます",
+    "text": "演習コード",
     "crumbs": [
       "ホーム",
       "SAS",
-      "SAS_第1回introduction 記述 相関"
+      "SAS　第2回2群比較"
     ]
   },
   {
-    "objectID": "SAS/01_SAS_Intro.html#データセット",
-    "href": "SAS/01_SAS_Intro.html#データセット",
-    "title": "SAS_第1回introduction 記述 相関",
+    "objectID": "SAS/03_SAS_分散分析.html#r",
+    "href": "SAS/03_SAS_分散分析.html#r",
+    "title": "SAS　第2回2群比較",
+    "section": "R",
+    "text": "R",
+    "crumbs": [
+      "ホーム",
+      "SAS",
+      "SAS　第2回2群比較"
+    ]
+  },
+  {
+    "objectID": "SAS/03_SAS_分散分析.html#python",
+    "href": "SAS/03_SAS_分散分析.html#python",
+    "title": "SAS　第2回2群比較",
+    "section": "Python",
+    "text": "Python\n#| eval: false\n# Pythonコードも同様に実行され、結果が埋め込まれます\nimport pandas as pd\ndf = pd.DataFrame({\"x\": [1, 2, 3]})\ndf.describe()",
+    "crumbs": [
+      "ホーム",
+      "SAS",
+      "SAS　第2回2群比較"
+    ]
+  },
+  {
+    "objectID": "SAS/03_SAS_分散分析.html#sas",
+    "href": "SAS/03_SAS_分散分析.html#sas",
+    "title": "SAS　第2回2群比較",
+    "section": "SAS",
+    "text": "SAS\n/* SASコードは実行されず、シンタックスハイライト表示のみです */\nproc means data=sashelp.class;\nrun;",
+    "crumbs": [
+      "ホーム",
+      "SAS",
+      "SAS　第2回2群比較"
+    ]
+  },
+  {
+    "objectID": "SAS/03_SAS_分散分析.html#jmp",
+    "href": "SAS/03_SAS_分散分析.html#jmp",
+    "title": "SAS　第2回2群比較",
+    "section": "JMP",
+    "text": "JMP\n/* JMPスクリプトも同様に表示のみです */",
+    "crumbs": [
+      "ホーム",
+      "SAS",
+      "SAS　第2回2群比較"
+    ]
+  },
+  {
+    "objectID": "SAS/03_SAS_分散分析.html#spss",
+    "href": "SAS/03_SAS_分散分析.html#spss",
+    "title": "SAS　第2回2群比較",
+    "section": "SPSS",
+    "text": "SPSS\n* SPSS構文も表示のみです.",
+    "crumbs": [
+      "ホーム",
+      "SAS",
+      "SAS　第2回2群比較"
+    ]
+  },
+  {
+    "objectID": "SAS/03_SAS_分散分析.html#ezr",
+    "href": "SAS/03_SAS_分散分析.html#ezr",
+    "title": "SAS　第2回2群比較",
+    "section": "EZR",
+    "text": "EZR\n# EZRはR基盤のため、Rタブと同じ書き方で実行結果を埋め込めます\n:::",
+    "crumbs": [
+      "ホーム",
+      "SAS",
+      "SAS　第2回2群比較"
+    ]
+  },
+  {
+    "objectID": "SAS/03_SAS_分散分析.html#データセット",
+    "href": "SAS/03_SAS_分散分析.html#データセット",
+    "title": "SAS　第2回2群比較",
     "section": "データセット",
-    "text": "データセット\n演習用データセット(csv)をダウンロード 演習用データセット(sas dataset)をダウンロード",
+    "text": "データセット\n演習用データセット(csv)をダウンロード\n演習用データセット(sas dataset)をダウンロード\nsascodeをダウンロード",
     "crumbs": [
       "ホーム",
       "SAS",
-      "SAS_第1回introduction 記述 相関"
+      "SAS　第2回2群比較"
     ]
   },
   {
-    "objectID": "SAS/01_SAS_Intro.html#講義動画",
-    "href": "SAS/01_SAS_Intro.html#講義動画",
-    "title": "SAS_第1回introduction 記述 相関",
+    "objectID": "SAS/03_SAS_分散分析.html#講義動画",
+    "href": "SAS/03_SAS_分散分析.html#講義動画",
+    "title": "SAS　第2回2群比較",
     "section": "講義動画",
     "text": "講義動画\n（Google Driveの共有リンクをここに貼る）",
     "crumbs": [
       "ホーム",
       "SAS",
-      "SAS_第1回introduction 記述 相関"
+      "SAS　第2回2群比較"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "統計解析 講義・演習リンク集",
-    "section": "",
-    "text": "このサイトは講義資料・演習コード・データセットの検索用ポータルです。\n左のサイドバー、または右上の検索アイコンから目的の回を探してください。"
+    "objectID": "Stat_DL_exercise/fashion_kadai (1).html#画像データの読み込み-loading-image-data",
+    "href": "Stat_DL_exercise/fashion_kadai (1).html#画像データの読み込み-loading-image-data",
+    "title": "ファッションアイテム画像の分類 Classification of Fashion Item Images",
+    "section": "画像データの読み込み Loading Image Data",
+    "text": "画像データの読み込み Loading Image Data\n\n\nCode\n%matplotlib inline\n!pip install japanize-matplotlib\n\nimport numpy as np\nimport tensorflow as tf\nfrom tensorflow.keras import datasets\nimport matplotlib.pyplot as plt\nimport japanize_matplotlib\n\n\n(x_train, y_train), (x_test, y_test) = datasets.fashion_mnist.load_data()\n\n\n\nCollecting japanize-matplotlib\n\n  Downloading japanize-matplotlib-1.1.3.tar.gz (4.1 MB)\n\n     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/4.1 MB ? eta -:--:--\n     ━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ 2.8/4.1 MB 81.8 MB/s eta 0:00:01\n     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.1/4.1 MB 70.5 MB/s eta 0:00:00\n\n  Preparing metadata (setup.py) ... done\n\nRequirement already satisfied: matplotlib in /usr/local/lib/python3.12/dist-packages (from japanize-matplotlib) (3.10.0)\n\nRequirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib-&gt;japanize-matplotlib) (1.3.3)\n\nRequirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib-&gt;japanize-matplotlib) (0.12.1)\n\nRequirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib-&gt;japanize-matplotlib) (4.63.0)\n\nRequirement already satisfied: kiwisolver&gt;=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib-&gt;japanize-matplotlib) (1.5.0)\n\nRequirement already satisfied: numpy&gt;=1.23 in /usr/local/lib/python3.12/dist-packages (from matplotlib-&gt;japanize-matplotlib) (2.0.2)\n\nRequirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib-&gt;japanize-matplotlib) (26.2)\n\nRequirement already satisfied: pillow&gt;=8 in /usr/local/lib/python3.12/dist-packages (from matplotlib-&gt;japanize-matplotlib) (11.3.0)\n\nRequirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib-&gt;japanize-matplotlib) (3.3.2)\n\nRequirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3.12/dist-packages (from matplotlib-&gt;japanize-matplotlib) (2.9.0.post0)\n\nRequirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil&gt;=2.7-&gt;matplotlib-&gt;japanize-matplotlib) (1.17.0)\n\nBuilding wheels for collected packages: japanize-matplotlib\n\n  Building wheel for japanize-matplotlib (setup.py) ... done\n\n  Created wheel for japanize-matplotlib: filename=japanize_matplotlib-1.1.3-py3-none-any.whl size=4120257 sha256=999f006e25a11a335c6bf39a16b715ed31451123fea0f473bd2689949a611da5\n\n  Stored in directory: /root/.cache/pip/wheels/c1/f7/9b/418f19a7b9340fc16e071e89efc379aca68d40238b258df53d\n\nSuccessfully built japanize-matplotlib\n\nInstalling collected packages: japanize-matplotlib\n\nSuccessfully installed japanize-matplotlib-1.1.3\n\nDownloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz\n\n29515/29515 ━━━━━━━━━━━━━━━━━━━━ 0s 0us/step\n\nDownloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-images-idx3-ubyte.gz\n\n26421880/26421880 ━━━━━━━━━━━━━━━━━━━━ 3s 0us/step\n\nDownloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/t10k-labels-idx1-ubyte.gz\n\n5148/5148 ━━━━━━━━━━━━━━━━━━━━ 0s 0us/step\n\nDownloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/t10k-images-idx3-ubyte.gz\n\n4422102/4422102 ━━━━━━━━━━━━━━━━━━━━ 1s 0us/step\n\n\n\n\n画像の枚数と画素数を確認する Check the number of images and the number of pixels\n\n\nCode\n# サンプルプログラムや講義資料を参考にし、抜けている部分を自分で書き足しなさい\nprint(\"訓練用画像の枚数と画素数\")\nprint(         )\n\nprint()\n\n# サンプルプログラムや講義資料を参考にし、抜けている部分を自分で書き足しなさい\nprint(\"テスト用画像の枚数と画素数\")\nprint(         )\n\n\n訓練用画像の枚数と画素数\n\n\nテスト用画像の枚数と画素数\n\n\n\nテスト用画像の1枚目の多次元配列を表示してみる\n\n\nCode\n# 途中で改行されないように、一行に表示できる文字数を200文字に変更\nnp.set_printoptions(linewidth=200)\n\n\nprint(x_train[0])\n\n\n[[  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]\n [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]\n [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]\n [  0   0   0   0   0   0   0   0   0   0   0   0   1   0   0  13  73   0   0   1   4   0   0   0   0   1   1   0]\n [  0   0   0   0   0   0   0   0   0   0   0   0   3   0  36 136 127  62  54   0   0   0   1   3   4   0   0   3]\n [  0   0   0   0   0   0   0   0   0   0   0   0   6   0 102 204 176 134 144 123  23   0   0   0   0  12  10   0]\n [  0   0   0   0   0   0   0   0   0   0   0   0   0   0 155 236 207 178 107 156 161 109  64  23  77 130  72  15]\n [  0   0   0   0   0   0   0   0   0   0   0   1   0  69 207 223 218 216 216 163 127 121 122 146 141  88 172  66]\n [  0   0   0   0   0   0   0   0   0   1   1   1   0 200 232 232 233 229 223 223 215 213 164 127 123 196 229   0]\n [  0   0   0   0   0   0   0   0   0   0   0   0   0 183 225 216 223 228 235 227 224 222 224 221 223 245 173   0]\n [  0   0   0   0   0   0   0   0   0   0   0   0   0 193 228 218 213 198 180 212 210 211 213 223 220 243 202   0]\n [  0   0   0   0   0   0   0   0   0   1   3   0  12 219 220 212 218 192 169 227 208 218 224 212 226 197 209  52]\n [  0   0   0   0   0   0   0   0   0   0   6   0  99 244 222 220 218 203 198 221 215 213 222 220 245 119 167  56]\n [  0   0   0   0   0   0   0   0   0   4   0   0  55 236 228 230 228 240 232 213 218 223 234 217 217 209  92   0]\n [  0   0   1   4   6   7   2   0   0   0   0   0 237 226 217 223 222 219 222 221 216 223 229 215 218 255  77   0]\n [  0   3   0   0   0   0   0   0   0  62 145 204 228 207 213 221 218 208 211 218 224 223 219 215 224 244 159   0]\n [  0   0   0   0  18  44  82 107 189 228 220 222 217 226 200 205 211 230 224 234 176 188 250 248 233 238 215   0]\n [  0  57 187 208 224 221 224 208 204 214 208 209 200 159 245 193 206 223 255 255 221 234 221 211 220 232 246   0]\n [  3 202 228 224 221 211 211 214 205 205 205 220 240  80 150 255 229 221 188 154 191 210 204 209 222 228 225   0]\n [ 98 233 198 210 222 229 229 234 249 220 194 215 217 241  65  73 106 117 168 219 221 215 217 223 223 224 229  29]\n [ 75 204 212 204 193 205 211 225 216 185 197 206 198 213 240 195 227 245 239 223 218 212 209 222 220 221 230  67]\n [ 48 203 183 194 213 197 185 190 194 192 202 214 219 221 220 236 225 216 199 206 186 181 177 172 181 205 206 115]\n [  0 122 219 193 179 171 183 196 204 210 213 207 211 210 200 196 194 191 195 191 198 192 176 156 167 177 210  92]\n [  0   0  74 189 212 191 175 172 175 181 185 188 189 188 193 198 204 209 210 210 211 188 188 194 192 216 170   0]\n [  2   0   0   0  66 200 222 237 239 242 246 243 244 221 220 193 191 179 182 182 181 176 166 168  99  58   0   0]\n [  0   0   0   0   0   0   0  40  61  44  72  41  35   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]\n [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]\n [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]]",
+    "crumbs": [
+      "ホーム",
+      "Stat DL Exercise",
+      "ファッションアイテム画像の分類  Classification of Fashion Item Images"
+    ]
+  },
+  {
+    "objectID": "Stat_DL_exercise/fashion_kadai (1).html#訓練用画像の表示-displaying-training-images",
+    "href": "Stat_DL_exercise/fashion_kadai (1).html#訓練用画像の表示-displaying-training-images",
+    "title": "ファッションアイテム画像の分類 Classification of Fashion Item Images",
+    "section": "訓練用画像の表示 Displaying Training Images",
+    "text": "訓練用画像の表示 Displaying Training Images\n\n\nCode\nfig = plt.figure()\n\n\nfor i in range(0,15):\n\n  ax = fig.add_subplot(3, 5, i+1)\n\n  ax.set_title(\"正解ラベル\" + str(y_train[i]))\n\n  ax.imshow(x_train[i], cmap='Greys')\n\nfig.tight_layout()\n\nplt.show()",
+    "crumbs": [
+      "ホーム",
+      "Stat DL Exercise",
+      "ファッションアイテム画像の分類  Classification of Fashion Item Images"
+    ]
+  },
+  {
+    "objectID": "Stat_DL_exercise/fashion_kadai (1).html#画像の正規化-image-normalization",
+    "href": "Stat_DL_exercise/fashion_kadai (1).html#画像の正規化-image-normalization",
+    "title": "ファッションアイテム画像の分類 Classification of Fashion Item Images",
+    "section": "画像の正規化 Image Normalization",
+    "text": "画像の正規化 Image Normalization\n画素値が0から1の範囲に収まるように前処理を行う Perform preprocessing so that the pixel values fall within the range of 0 to 1.\n\n\nCode\n# サンプルプログラムや講義資料を参考にし、抜けている部分を自分で書き足しなさい\nx_train = x_train / 255.0\nx_test = x_test / 255.0\n\n\nカテゴリ変数をone-hotエンコーディングする One-hot encoding of categorical variables\n\n\nCode\nfrom tensorflow.keras.utils import to_categorical\nfrom tensorflow.keras import datasets\n\n# 誤って複数回ワンホットエンコーディングされるのを防ぐため、元のラベルデータを再ロードします。\n(_, y_train_original), (_, y_test_original) = datasets.fashion_mnist.load_data()\n\nprint(\"エンコーディング前のラベルの一部を表示\")\nprint(y_train_original[0:4])\n\n# 訓練用データとテスト用の正解ラベルをone-hotエンコーディング\n# サンプルプログラムや講義資料を参考にし、抜けている部分を自分で書き足しなさい\ny_train = to_categorical(y_train_original, num_classes=10)\ny_test = to_categorical(y_test_original, num_classes=10)\n\nprint()\nprint(\"エンコーディング後のラベルの一部を表示\")\nprint(y_train[0:4])\n\n\nエンコーディング前のラベルの一部を表示\n[9 0 0 3]\n\nエンコーディング後のラベルの一部を表示\n[[0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]\n [1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]",
+    "crumbs": [
+      "ホーム",
+      "Stat DL Exercise",
+      "ファッションアイテム画像の分類  Classification of Fashion Item Images"
+    ]
+  },
+  {
+    "objectID": "Stat_DL_exercise/fashion_kadai (1).html#モデルの作成-creating-a-model",
+    "href": "Stat_DL_exercise/fashion_kadai (1).html#モデルの作成-creating-a-model",
+    "title": "ファッションアイテム画像の分類 Classification of Fashion Item Images",
+    "section": "モデルの作成 Creating a Model",
+    "text": "モデルの作成 Creating a Model\n\n\nCode\nfrom tensorflow.keras.models import Sequential\n\n# sequentialモデルの作成\n# サンプルプログラムや講義資料を参考にし、抜けている部分を自分で書き足しなさい\nmodel = Sequential()",
+    "crumbs": [
+      "ホーム",
+      "Stat DL Exercise",
+      "ファッションアイテム画像の分類  Classification of Fashion Item Images"
+    ]
+  },
+  {
+    "objectID": "Stat_DL_exercise/fashion_kadai (1).html#モデルへニューロンの層を追加",
+    "href": "Stat_DL_exercise/fashion_kadai (1).html#モデルへニューロンの層を追加",
+    "title": "ファッションアイテム画像の分類 Classification of Fashion Item Images",
+    "section": "モデルへニューロンの層を追加",
+    "text": "モデルへニューロンの層を追加\n\n\nCode\n# 追加する層をインポートしておく\nfrom tensorflow.keras.layers import Dense, Dropout, Flatten\n\n\n# Flatten層の追加\n# 画像を1次元配列に変換する\n# サンプルプログラムや講義資料を参考にし、抜けている部分を自分で書き足しなさい\nmodel.add(Flatten())\n\n# 中間層(隠れ層)の追加\n# サンプルプログラムや講義資料を参考にし、抜けている部分を自分で書き足しなさい\nmodel.add(Dense(128, activation='relu'))\n\n# 出力層の追加\n# サンプルプログラムや講義資料を参考にし、抜けている部分を自分で書き足しなさい\nmodel.add(Dense(10, activation='softmax'))",
+    "crumbs": [
+      "ホーム",
+      "Stat DL Exercise",
+      "ファッションアイテム画像の分類  Classification of Fashion Item Images"
+    ]
+  },
+  {
+    "objectID": "Stat_DL_exercise/fashion_kadai (1).html#モデルのコンパイル",
+    "href": "Stat_DL_exercise/fashion_kadai (1).html#モデルのコンパイル",
+    "title": "ファッションアイテム画像の分類 Classification of Fashion Item Images",
+    "section": "モデルのコンパイル",
+    "text": "モデルのコンパイル\n\n\nCode\n# モデルのコンパイル\n# 評価指標として正解率を用いる\n# サンプルプログラムや講義資料を参考にし、抜けている部分を自分で書き足しなさい\nmodel.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])\n\nmodel.summary()\n\n\nModel: \"sequential\"\n\n\n\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓\n┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃\n┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩\n│ flatten (Flatten)               │ ?                      │   0 (unbuilt) │\n├─────────────────────────────────┼────────────────────────┼───────────────┤\n│ dense (Dense)                   │ ?                      │   0 (unbuilt) │\n├─────────────────────────────────┼────────────────────────┼───────────────┤\n│ dense_1 (Dense)                 │ ?                      │   0 (unbuilt) │\n└─────────────────────────────────┴────────────────────────┴───────────────┘\n\n\n\n Total params: 0 (0.00 B)\n\n\n\n Trainable params: 0 (0.00 B)\n\n\n\n Non-trainable params: 0 (0.00 B)",
+    "crumbs": [
+      "ホーム",
+      "Stat DL Exercise",
+      "ファッションアイテム画像の分類  Classification of Fashion Item Images"
+    ]
+  },
+  {
+    "objectID": "Stat_DL_exercise/fashion_kadai (1).html#学習の実行",
+    "href": "Stat_DL_exercise/fashion_kadai (1).html#学習の実行",
+    "title": "ファッションアイテム画像の分類 Classification of Fashion Item Images",
+    "section": "学習の実行",
+    "text": "学習の実行\n\n\nCode\nepochs = 10\n\n# サンプルプログラムや講義資料を参考にし、抜けている部分を自分で書き足しなさい\nresults = model.fit(x_train, y_train, epochs=epochs, validation_data=(x_test, y_test))\n\n\n\nEpoch 1/10\n\n1875/1875 ━━━━━━━━━━━━━━━━━━━━ 8s 3ms/step - accuracy: 0.8256 - loss: 0.4974 - val_accuracy: 0.8467 - val_loss: 0.4272\n\nEpoch 2/10\n\n1875/1875 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - accuracy: 0.8650 - loss: 0.3741 - val_accuracy: 0.8554 - val_loss: 0.3945\n\nEpoch 3/10\n\n1875/1875 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - accuracy: 0.8780 - loss: 0.3351 - val_accuracy: 0.8670 - val_loss: 0.3700\n\nEpoch 4/10\n\n1875/1875 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - accuracy: 0.8852 - loss: 0.3131 - val_accuracy: 0.8616 - val_loss: 0.3802\n\nEpoch 5/10\n\n1875/1875 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - accuracy: 0.8907 - loss: 0.2928 - val_accuracy: 0.8760 - val_loss: 0.3509\n\nEpoch 6/10\n\n1875/1875 ━━━━━━━━━━━━━━━━━━━━ 5s 3ms/step - accuracy: 0.8969 - loss: 0.2779 - val_accuracy: 0.8772 - val_loss: 0.3448\n\nEpoch 7/10\n\n1875/1875 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - accuracy: 0.9008 - loss: 0.2673 - val_accuracy: 0.8794 - val_loss: 0.3320\n\nEpoch 8/10\n\n1875/1875 ━━━━━━━━━━━━━━━━━━━━ 10s 3ms/step - accuracy: 0.9038 - loss: 0.2555 - val_accuracy: 0.8711 - val_loss: 0.3674\n\nEpoch 9/10\n\n1875/1875 ━━━━━━━━━━━━━━━━━━━━ 7s 4ms/step - accuracy: 0.9083 - loss: 0.2463 - val_accuracy: 0.8876 - val_loss: 0.3246\n\nEpoch 10/10\n\n1875/1875 ━━━━━━━━━━━━━━━━━━━━ 6s 3ms/step - accuracy: 0.9101 - loss: 0.2394 - val_accuracy: 0.8796 - val_loss: 0.3483",
+    "crumbs": [
+      "ホーム",
+      "Stat DL Exercise",
+      "ファッションアイテム画像の分類  Classification of Fashion Item Images"
+    ]
+  },
+  {
+    "objectID": "Stat_DL_exercise/fashion_kadai (1).html#学習履歴の可視化",
+    "href": "Stat_DL_exercise/fashion_kadai (1).html#学習履歴の可視化",
+    "title": "ファッションアイテム画像の分類 Classification of Fashion Item Images",
+    "section": "学習履歴の可視化",
+    "text": "学習履歴の可視化\n\n\nCode\n\n# 学習のエポック数のリストを生成\nepo = range(1, epochs+1)\n\n\n#------------------------------\n# 損失関数のグラフを表示\n#------------------------------\n\nfig = plt.figure()\nax = fig.add_subplot(111)\n\nax.set_xlabel(\"エポック\")\nax.set_ylabel(\"loss\")\n\n\nax.set_xlim(0,epochs + 1)\nax.set_ylim(0,0.8)\n\n\n\n# 訓練用データでの損失関数のグラフ\n# サンプルプログラムや講義資料を参考にし、抜けている部分を自分で書き足しなさい\nax.plot(epo, results.history['loss'], label=\"訓練用データ\")\n\n# テスト用データでの損失関数のグラフ\n# サンプルプログラムや講義資料を参考にし、抜けている部分を自分で書き足しなさい\nax.plot(epo, results.history['val_loss'], label=\"テスト用データ\")\n\nax.legend()\n\nplt.show()\n\n\n#------------------------------\n# 正解率のグラフを表示\n#------------------------------\n\n\nfig = plt.figure()\nax = fig.add_subplot(111)\n\nax.set_xlabel(\"エポック\")\nax.set_ylabel(\"accuracy\")\n\nax.set_xlim(0,epochs + 1)\nax.set_ylim(0,1)\n\n\n# 訓練用データでの正解率のグラフ\n# サンプルプログラムや講義資料を参考にし、抜けている部分を自分で書き足しなさい\nax.plot(epo, results.history['accuracy'], label=\"訓練用データ\")\n\n# テスト用データでの正解率のグラフ\n# サンプルプログラムや講義資料を参考にし、抜けている部分を自分で書き足しなさい\nax.plot(epo, results.history['val_accuracy'], label=\"テスト用データ\")\n\nax.legend()\n\nplt.show()",
+    "crumbs": [
+      "ホーム",
+      "Stat DL Exercise",
+      "ファッションアイテム画像の分類  Classification of Fashion Item Images"
+    ]
+  },
+  {
+    "objectID": "Stat_DL_exercise/fashion_kadai (1).html#学習済みモデルを用いた予測",
+    "href": "Stat_DL_exercise/fashion_kadai (1).html#学習済みモデルを用いた予測",
+    "title": "ファッションアイテム画像の分類 Classification of Fashion Item Images",
+    "section": "学習済みモデルを用いた予測",
+    "text": "学習済みモデルを用いた予測\n\n\nCode\n# テストデータに対する予測\ny_pred = model.predict(x_test)\n\n# 予測値の最初のいくつかを表示\nprint(\"予測結果の一部を表示\")\nprint(y_pred[0:4])\n\nprint()\n\n# 最も確率が高いラベルを選ぶ\npredicted_label = np.argmax(y_pred, axis=1)\nprint(\"予測したラベルの一部を表示\")\nprint(predicted_label[0:4])\n\n\n\n313/313 ━━━━━━━━━━━━━━━━━━━━ 1s 2ms/step\n\n予測結果の一部を表示\n\n[[1.05048565e-08 5.84708393e-11 5.57043967e-10 2.93607638e-10 7.85844168e-10 7.06832740e-04 7.79815679e-08 1.43257165e-02 3.07717833e-08 9.84967291e-01]\n\n [1.02699174e-04 1.74890840e-14 9.98312235e-01 5.72848670e-12 1.49038807e-03 4.66452987e-10 9.47113949e-05 2.11387263e-13 3.71088960e-09 1.60987262e-15]\n\n [1.56724610e-07 9.99999881e-01 9.75586209e-11 1.95022647e-08 7.24958149e-11 5.72808977e-19 9.74701320e-10 6.02949858e-25 1.42406120e-13 2.72016674e-17]\n\n [1.52505436e-07 9.99984026e-01 3.65827524e-09 1.58451166e-05 9.16144938e-09 1.79205300e-15 1.03200213e-08 1.46712714e-18 8.71374858e-13 2.00415246e-13]]\n\n\n\n予測したラベルの一部を表示\n\n[9 2 1 1]",
+    "crumbs": [
+      "ホーム",
+      "Stat DL Exercise",
+      "ファッションアイテム画像の分類  Classification of Fashion Item Images"
+    ]
+  },
+  {
+    "objectID": "Stat_DL_exercise/fashion_kadai (1).html#混同行列の表示",
+    "href": "Stat_DL_exercise/fashion_kadai (1).html#混同行列の表示",
+    "title": "ファッションアイテム画像の分類 Classification of Fashion Item Images",
+    "section": "混同行列の表示",
+    "text": "混同行列の表示\n\n\nCode\nfrom sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay\n\n\n\n# テストデータの正解ラベル\ny_test_label = np.argmax(y_test, axis=1)\n\n\n\n# 混同行列の計算\n# サンプルプログラムや講義資料を参考にし、抜けている部分を自分で書き足しなさい\ncm = confusion_matrix(y_test_label, predicted_label)\n\n# 混同行列のヒートマップを作成\ndisp = ConfusionMatrixDisplay(confusion_matrix=cm)\n\n\ndisp.plot()\n\nplt.show()",
+    "crumbs": [
+      "ホーム",
+      "Stat DL Exercise",
+      "ファッションアイテム画像の分類  Classification of Fashion Item Images"
+    ]
   },
   {
     "objectID": "Stat_DL_exercise/mnist (1).html",
