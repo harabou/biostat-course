@@ -143,7 +143,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Stat_DL_exercise/food_CNN_classification_学生版.html">Stat DL Exercise</a></li><li class="breadcrumb-item"><a href="../Stat_DL_exercise/food_YOLO_exercise.html">Food Detection Exercise (学生用)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Stat_DL_exercise/food_CNN_classification_学生版 (1).html">Stat DL Exercise</a></li><li class="breadcrumb-item"><a href="../Stat_DL_exercise/food_YOLO_exercise (3).html">Food Detection Exercise (学生用)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -195,19 +195,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Stat_DL_exercise/food_CNN_classification_学生版.html" class="sidebar-item-text sidebar-link">
+  <a href="../Stat_DL_exercise/food_CNN_classification_学生版 (1).html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Food Image Classification (UEC FOOD 100 subset)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Stat_DL_exercise/food_CNN_classification_自己学習版.html" class="sidebar-item-text sidebar-link">
+  <a href="../Stat_DL_exercise/food_CNN_classification_自己学習版 (2).html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Food Image Classification (UEC FOOD 100 subset)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Stat_DL_exercise/food_YOLO_exercise.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Stat_DL_exercise/food_YOLO_exercise (3).html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Food Detection Exercise (学生用)</span></a>
   </div>
 </li>
@@ -235,7 +235,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#googleドライブのマウント" id="toc-googleドライブのマウント" class="nav-link active" data-scroll-target="#googleドライブのマウント">1. Googleドライブのマウント</a></li>
+  <li><a href="#モデルと写真の準備" id="toc-モデルと写真の準備" class="nav-link active" data-scroll-target="#モデルと写真の準備">1. モデルと写真の準備</a></li>
   <li><a href="#学習済みモデルの読み込み" id="toc-学習済みモデルの読み込み" class="nav-link" data-scroll-target="#学習済みモデルの読み込み">2. 学習済みモデルの読み込み</a></li>
   <li><a href="#検出してみる" id="toc-検出してみる" class="nav-link" data-scroll-target="#検出してみる">3. 検出してみる</a></li>
   <li><a href="#結果を見てみよう" id="toc-結果を見てみよう" class="nav-link" data-scroll-target="#結果を見てみよう">4. 結果を見てみよう</a></li>
@@ -246,7 +246,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Stat_DL_exercise/food_CNN_classification_学生版.html">Stat DL Exercise</a></li><li class="breadcrumb-item"><a href="../Stat_DL_exercise/food_YOLO_exercise.html">Food Detection Exercise (学生用)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Stat_DL_exercise/food_CNN_classification_学生版 (1).html">Stat DL Exercise</a></li><li class="breadcrumb-item"><a href="../Stat_DL_exercise/food_YOLO_exercise (3).html">Food Detection Exercise (学生用)</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Food Detection Exercise (学生用)</h1>
 </div>
@@ -266,13 +266,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>学習済みのYOLOモデルを使って、配布された写真から複数の食品を検出してみましょう。 学習は済んでいるので、このノートブックでは<strong>モデルを読み込んで、推論するだけ</strong>です。</p>
-<section id="googleドライブのマウント" class="level2">
-<h2 class="anchored" data-anchor-id="googleドライブのマウント">1. Googleドライブのマウント</h2>
+<section id="モデルと写真の準備" class="level2">
+<h2 class="anchored" data-anchor-id="モデルと写真の準備">1. モデルと写真の準備</h2>
 <div id="cell-3" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>drive.mount(<span class="st">'/content/drive'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install gdown <span class="op">-</span>q</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ↓ 講義用Google Driveに置いた food_yolo_exercise.zip のファイルIDに書き換えてください</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>FILE_ID <span class="op">=</span> <span class="st">"15f9QFPYBRsuxQincRUBJilYD4EUL-0kS"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>gdown <span class="op">--</span><span class="bu">id</span> {FILE_ID} <span class="op">-</span>O food_yolo_exercise.<span class="bu">zip</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>unzip <span class="op">-</span>q <span class="op">-</span>o food_yolo_exercise.<span class="bu">zip</span> <span class="op">-</span>d .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
@@ -290,11 +295,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ultralytics <span class="im">import</span> YOLO</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 環境に合わせて書き換えてください</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>model_path <span class="op">=</span> <span class="st">'/content/drive/MyDrive/Colab Notebooks/food_yolo/best.pt'</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>photo_dir <span class="op">=</span> <span class="st">'/content/drive/MyDrive/Colab Notebooks/food_yolo/test_photos/'</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> YOLO(model_path)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>model_path <span class="op">=</span> <span class="st">'best.pt'</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>photo_dir <span class="op">=</span> <span class="st">'test_photos/'</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> YOLO(model_path)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
@@ -303,40 +307,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="cell-8" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> detect_and_show_yolo(image_path, confidence<span class="op">=</span><span class="fl">0.4</span>):</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> model.predict(image_path, conf<span class="op">=</span>confidence, verbose<span class="op">=</span><span class="va">False</span>)[<span class="dv">0</span>]</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    annotated <span class="op">=</span> result.plot()       <span class="co"># 検出結果を描き込んだ画像(BGR)</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    annotated_rgb <span class="op">=</span> annotated[..., ::<span class="op">-</span><span class="dv">1</span>]  <span class="co"># BGR -&gt; RGB</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    ax.imshow(annotated_rgb)</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    ax.axis(<span class="st">'off'</span>)</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 使える写真の一覧を確認</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.listdir(photo_dir))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div id="cell-9" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 配布された写真の1枚を試してみる(ファイル名は実際のものに書き換えてください)</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> detect_and_show_yolo(photo_dir <span class="op">+</span> <span class="st">"photo1.jpg"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> detect_and_show(image_path, confidence<span class="op">=</span><span class="fl">0.4</span>):</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> model.predict(image_path, conf<span class="op">=</span>confidence, verbose<span class="op">=</span><span class="va">False</span>)[<span class="dv">0</span>]</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    annotated <span class="op">=</span> result.plot()       <span class="co"># 検出結果を描き込んだ画像(BGR)</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    annotated_rgb <span class="op">=</span> annotated[..., ::<span class="op">-</span><span class="dv">1</span>]  <span class="co"># BGR -&gt; RGB</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    ax.imshow(annotated_rgb)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    ax.axis(<span class="st">'off'</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div id="cell-10" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 配布された写真の1枚を試してみる(ファイル名は実際のものに書き換えてください)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> detect_and_show(photo_dir <span class="op">+</span> <span class="st">"karaage2.png"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
 <section id="結果を見てみよう" class="level2">
 <h2 class="anchored" data-anchor-id="結果を見てみよう">4. 結果を見てみよう</h2>
 <p><code>result</code>の中身を見ると、検出された品目ごとに「信頼度スコア(confidence)」が入っています。 スコアが低い品目、複数の品目が重なって検出されている箇所などに注目してみましょう。</p>
-<div id="cell-11" class="cell">
+<div id="cell-12" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> box <span class="kw">in</span> result.boxes:</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    class_id <span class="op">=</span> <span class="bu">int</span>(box.cls[<span class="dv">0</span>])</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    class_name <span class="op">=</span> model.names[class_id]</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    confidence <span class="op">=</span> <span class="bu">float</span>(box.conf[<span class="dv">0</span>])</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>class_name<span class="sc">}</span><span class="ss">: confidence = </span><span class="sc">{</span>confidence<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> box <span class="kw">in</span> result.boxes:</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    class_id <span class="op">=</span> <span class="bu">int</span>(box.cls[<span class="dv">0</span>])</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    class_name <span class="op">=</span> model.names[class_id]</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    confidence <span class="op">=</span> <span class="bu">float</span>(box.conf[<span class="dv">0</span>])</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>class_name<span class="sc">}</span><span class="ss">: confidence = </span><span class="sc">{</span>confidence<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
