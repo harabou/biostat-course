@@ -2,42 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://harabou.github.io/biostat-course/Stat_DL_exercise/food_YOLO_exercise (3).html</loc>
-    <lastmod>2026-08-19T11:58:25.822Z</lastmod>
-  </url>
-  <url>
-    <loc>https://harabou.github.io/biostat-course/Stat_DL_exercise/food_YOLO_training (3).html</loc>
-    <lastmod>2026-08-19T11:58:25.822Z</lastmod>
-  </url>
-  <url>
-    <loc>https://harabou.github.io/biostat-course/Stat_DL_exercise/food_CNN_classification_学生版 (1).html</loc>
-    <lastmod>2026-08-19T11:58:25.808Z</lastmod>
-  </url>
-  <url>
-    <loc>https://harabou.github.io/biostat-course/index.html</loc>
-    <lastmod>2026-08-19T11:58:25.829Z</lastmod>
-  </url>
-  <url>
-    <loc>https://harabou.github.io/biostat-course/SAS/01_SAS_Intro.html</loc>
-    <lastmod>2026-08-19T11:58:25.792Z</lastmod>
-  </url>
-  <url>
-    <loc>https://harabou.github.io/biostat-course/SAS/02_SAS_2群比較.html</loc>
-    <lastmod>2026-08-19T11:58:25.792Z</lastmod>
-  </url>
-  <url>
-    <loc>https://harabou.github.io/biostat-course/SAS/03_SAS_分散分析.html</loc>
-    <lastmod>2026-08-19T11:58:25.792Z</lastmod>
-  </url>
-  <url>
-    <loc>https://harabou.github.io/biostat-course/Stat_DL_exercise/fashion_kadai (1).html</loc>
-    <lastmod>2026-08-19T11:58:25.793Z</lastmod>
+    <lastmod>2026-09-08T09:56:01.494Z</lastmod>
   </url>
   <url>
     <loc>https://harabou.github.io/biostat-course/Stat_DL_exercise/mnist (1).html</loc>
-    <lastmod>2026-08-19T11:58:25.824Z</lastmod>
+    <lastmod>2026-09-08T09:56:01.495Z</lastmod>
   </url>
   <url>
     <loc>https://harabou.github.io/biostat-course/Stat_DL_exercise/food_CNN_classification_自己学習版 (2).html</loc>
-    <lastmod>2026-08-19T11:58:25.822Z</lastmod>
+    <lastmod>2026-09-08T09:56:01.494Z</lastmod>
+  </url>
+  <url>
+    <loc>https://harabou.github.io/biostat-course/index.html</loc>
+    <lastmod>2026-09-08T09:56:01.501Z</lastmod>
+  </url>
+  <url>
+    <loc>https://harabou.github.io/biostat-course/Stat_DL_exercise/fashion_kadai (1).html</loc>
+    <lastmod>2026-09-08T09:56:01.478Z</lastmod>
+  </url>
+  <url>
+    <loc>https://harabou.github.io/biostat-course/Stat_DL_exercise/food_YOLO_training (3).html</loc>
+    <lastmod>2026-09-08T09:56:01.494Z</lastmod>
+  </url>
+  <url>
+    <loc>https://harabou.github.io/biostat-course/Stat_DL_exercise/food_CNN_classification_学生版 (1).html</loc>
+    <lastmod>2026-09-08T09:56:01.491Z</lastmod>
   </url>
 </urlset>
